@@ -1,10 +1,180 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$green : #159209;
+$wood : #3F301D;
+$brown : #231709;
+$tortilla: #9A7B4F;
+* {
+  box-sizing: border-box;
+  overflow: auto;
+}
+body {
+  min-height: 100%;
+  margin-bottom: 100px;
+  overflow: auto;
+  margin: 0 2%;
+}
+h1 {
+  color: $tortilla;
+}
 .footer {
   height: 140px;
   width: 100%;
-  background-image: image-url('grass.jpg');
+  background-image: url('grass.jpg');
   position: fixed;
   bottom: 0;
 }
+
+nav {
+  position: static;
+  width: 100%;
+  height: 45px;
+  overflow: auto;
+  border-bottom: 1px solid $green;
+  padding-bottom: 60px;
+}
+.nav_left {
+  float: left;
+}
+.nav_right {
+  float: right;
+  padding-right: 40px;
+}
+nav ul li {
+  display: inline-block;
+  color: $green;
+}
+nav li a {
+  color: $green;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  padding: 11px;
+  font-size: 1.7em;
+  font-family: Georgia, Verdana, sans-serif;
+}
+nav a:hover {
+  text-decoration: none;
+  color: $green;
+  font-size: 2em;
+}
+/* Contact Page*/
+.contact_page h4 {
+  text-align: center;
+  color: $brown;
+  margin-top: 10px;
+}
+.contact_page label {
+  color: $wood;
+}
+.contact_page button {
+  background-color: $wood;
+  color: white;
+}
+.contact_page button:hover {
+  background-color: $tortilla;
+  color: white;
+}
+.contact_page p {
+  color: $tortilla;
+}
+.contact_page body{
+  overflow: auto;
+}
+/* Posts Index*/
+.posts_index {
+}
+.posts_index section {
+  margin-bottom: 100px;
+  width: 100%;
+}
+.posts_index > h1 {
+  color: $tortilla;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .posts_index  h1 {
+    text-align: left;
+  }
+
+}
+.inline_list {
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+}
+.inline_list li {
+  display: inline-block;
+  font-size: .75em;
+}
+.inline_list a {
+  font-size: .75em;
+  color: black;
+  padding: 0 2px;
+  text-align: center;
+}
+.date {
+  margin-left: 10px;
+}
+/* Posts Divs */
+.label {
+  font-size: 15px;
+  color: $green;
+}
+.new_post  a {
+  color: white;
+  background-color: $tortilla;
+  font-size: .75em;
+  padding: 0 10px;
+  text-decoration: none;
+  position: fixed;
+  top: 75px;
+  right: 20px;
+  border: 2px solid $tortilla;
+  z-index: 1;
+}
+.new_post a:hover {
+  color: white;
+  background-color: $wood;
+}
+.post_section {
+  height: 100%;
+}
+/*Form*/
+
+.field {
+  width: 90%;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.field input {
+  float: right;
+  width: 75%;
+}
+@media only screen and (max-width: 768px) {
+  .field {
+    width: 90%;
+  }
+  .field input {
+    width: 75%;
+    float:right;
+  }
+}
+.top_of_field {
+  margin-top: 35px;
+}
+.field textarea {
+  width: 75%;
+  float: right;
+  height: 200px;
+}
+.field label {
+  color: $green;
+}
+.label {
+  color: $green;
+  padding-left: 0;
+}
+

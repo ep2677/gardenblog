@@ -2,21 +2,32 @@
 <html>
   <head>
     <title>Gardenblog</title>
-    <%= csrf_meta_tags %>
-
+   
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
     <nav>
-      <div>
+      
+      <ul class="nav_left">
+        <li><%=link_to 'Home', posts_path %></li>
+      </ul>
+      <ul class="nav_right">
+        <li><%=link_to 'About', static_pages_about_path %></li>
+        <li><%=link_to 'Contact', static_pages_contact_path %></li>
+       
+      </ul>
+
     </nav>
     <%= yield %>
-    <footer class="container-fluid footer">
-    </footer>
+    
   </body>
+  <footer class="container-fluid footer">
+  </footer>
+
 </html>
