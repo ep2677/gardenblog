@@ -3,21 +3,23 @@
 
 <h1>Posts</h1>
 <h1 class="new_post"><%=link_to 'New Post', new_post_path%></h1>
-
+<div class="container">
   <%= @posts.each do |post| %>
-  <section class="post_section col-lg-12">
-    <div class="row">
-      <p class="label"> Title: <%= post.title %></p>
-      <p class="date"><%= post.created_at.strftime("%a %m/%Y %H:%M") %></p>
+
+  <section class="post_section col-lg-3 col-md-3 col-sm-3 col-xs-12">
+    <div class="row title_and_date">
+      <p class="label title"> Title: <span class="actual_title"><%= post.title %></span></p>
+      <p class="date"><%= post.created_at.strftime("%a %m/%Y %H:%M")%></p>
     </div>
-    <p><%= post.article %></p>
-    <p class="label">Author: <%= post.author %></p>
-    <div class="row">
-      <p><%= link_to 'Show', post %> | <%= link_to 'Edit', edit_post_path(post)%> | <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    
+    
+    <div class="row bottom_post_div">
+      <p class="label author">Author: <%= post.author %></p>
+      <p class="post_links"><%= link_to 'Show', post %> | <%= link_to 'Edit', edit_post_path(post)%> | <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
     </div>
 
   </section>
   <%end%>
-   <br>
-  
+   
+  </div>
 </body>
